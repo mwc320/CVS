@@ -6,6 +6,11 @@ import Humburger          from './humburger/Humburger';
 import LeftNav            from './leftNav/LeftNav';
 import RightNav           from './rightNav/RightNav';
 
+
+var WHITE = {
+  color:'#FFFFFF',
+};
+
 const NavigationBar = ({
   brand,
   navModel,
@@ -13,13 +18,14 @@ const NavigationBar = ({
   handleRightNavItemClick
 }) => {
   return (
-    <nav className="navbar navbar-default">
-      <div className="containersCustom">
+
+    <nav className="navbar navbar-default" style={{border: '0px'}}>
+      <div className="containersCustom" style={{backgroundColor: '#2552a0'}} >
         <div className="navbar-header">
           {
             <Humburger />
           }
-          <a className="navbar-brand">
+          <a style={WHITE} className="navbar-brand">
             {brand}
           </a>
         </div>
