@@ -19,12 +19,26 @@ import {
   Button
 }                     from 'react-bootstrap';
 
+
+
 const form = {
         marginLeft: '0',
+        backgroundColor:'rgba, 255, 255, 255, 0',
     };
 
 const center = {
     margin: '0 auto',
+    backgroundColor:'#2552a0',
+};
+
+var WHITE = {
+  color:'#FFFFFF'
+};
+
+var WHITETITLE = {
+  color:'#FFFFFF',
+  marginBottom: 40,
+  marginLeft: 50,
 };
 
 class Home extends PureComponent {
@@ -61,7 +75,7 @@ class Home extends PureComponent {
               <div>
                 <Row className="show-grid">
                   <Col xs={6} md={6}> 
-                      <h2>
+                      <h2 style={WHITETITLE}>
                         Contractor Verification System
                       </h2>
                   </Col>
@@ -73,7 +87,7 @@ class Home extends PureComponent {
                 <Row className="show-grid">
                   <Col xs={6} md={4}>
                     <form>
-                    <ControlLabel>Enter your contractors first name</ControlLabel>
+                    <ControlLabel style={WHITE}>Enter your contractors first name</ControlLabel>
                       <FormGroup
                         controlId="formBasicText">
                               <FormControl style={{textAlign: 'center'}} 
@@ -87,7 +101,7 @@ class Home extends PureComponent {
                       </FormGroup>
                       <FormGroup
                         controlId="formBasicText">
-                          <ControlLabel>"Enter your contractor's last name"</ControlLabel>
+                          <ControlLabel style={WHITE}>"Enter your contractor's last name"</ControlLabel>
                               <FormControl
                                   type="text"
                                   value={this.state.value}
@@ -98,7 +112,7 @@ class Home extends PureComponent {
                       </FormGroup>
                       <FormGroup
                         controlId="formBasicText">
-                          <ControlLabel>"Enter your contractor's License Number"</ControlLabel>
+                          <ControlLabel style={WHITE}>"Enter your contractor's License Number"</ControlLabel>
                               <FormControl
                                   type="text"
                                   value={this.state.value}
@@ -108,13 +122,13 @@ class Home extends PureComponent {
                               <FormControl.Feedback />
                       </FormGroup>
                       <FormGroup controlId="formControlsSelect">
-                        <ControlLabel>Select Your State</ControlLabel>
+                        <ControlLabel style={WHITE}>Select Your State</ControlLabel>
                           <FormControl componentClass="select" placeholder="select">
                             <option value="select">Alabama</option>
                             <option value="other">...</option>
                           </FormControl>
                       </FormGroup>
-                      <Button className="btn-lrg btn btn-success" type="submit">
+                      <Button style={{textAlign: 'center'}} className="btn-lrg btn btn-success" type="submit">
                         Submit
                       </Button>
                     </form>

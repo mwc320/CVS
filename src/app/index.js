@@ -19,6 +19,10 @@ const BootstrapedElement    = document.getElementById(ELEMENT_TO_BOOTSTRAP);
 
 injectTpEventPlugin();
 
+const pFont = {
+
+};
+
 const renderApp = RootComponent => {
   render(
     <AppContainer>
